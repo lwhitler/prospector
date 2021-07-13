@@ -162,7 +162,7 @@ def write_hdf5(hfile, run_params, model, obs, sampler=None,
             if obs["wavelength"] is None:
                 best.create_dataset("restframe_wavelengths", data=sps.wavelengths)
 
-        # Store the githash last after flushing since getting it might cause an
+    # Store the githash last after flushing since getting it might cause an
     # uncatchable crash
     bgh = githash(**run_params)
     hf.attrs['prospector_version'] = json.dumps(bgh)
