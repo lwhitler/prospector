@@ -461,7 +461,7 @@ def functions_to_names(p):
     for k, v in list(p.items()):
         if callable(v):
             try:
-                p[k] = [v.__name__, v.__module__]
+                p[k] = [v.__class__.__name__, v.__module__]
             except(AttributeError):
                 p[k] = pickle.dumps(v, protocol=2)
     return p
