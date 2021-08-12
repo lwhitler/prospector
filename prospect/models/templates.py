@@ -107,7 +107,7 @@ def adjust_continuity_agebins(parset, tuniv=13.7, nbins=7):
         raise ValueError('Must have nbins >= 4, returning')
 
     tbinmax = (tuniv * 0.85) * 1e9
-    lim1, lim2 = 6.4772, 7.0
+    lim1, lim2 = 7.4772, 8.0
     agelims = ([0, lim1] +
                np.linspace(lim2, np.log10(tbinmax), nbins-2).tolist() +
                [np.log10(tuniv*1e9)])
